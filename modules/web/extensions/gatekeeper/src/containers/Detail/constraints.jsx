@@ -4,15 +4,15 @@ import { constraintStore } from '../../store';
 
 import { Icon, formatTime, DetailPage } from '@ks-console/shared';
 
-const PATH = '/clusters/:cluster/gatekeeper.constraints/:name';
+const PATH = '/clusters/:cluster/gatekeeper.constraints/:kind/:name';
 
 const ConstraintsDetails = () => {
-  const { cluster, name } = useParams();
+  const { cluster, kind ,name } = useParams();
   const detailPageRef = useRef();
   const tabs = [{ path: `${PATH}/violations`, title: t('CONSTRAINT_VIOLATIONS') }];
 
   const attrs = data => {
-    const newDate = constraintStore.mapper(data?.items[0]);
+    const newDate = constraintStore.mapper(data);
 
     return [
       { label: t('CLUSTER_PL'), value: cluster || '' },
@@ -30,7 +30,7 @@ const ConstraintsDetails = () => {
         tabs={tabs}
         authKey={constraintStore.module}
         store={constraintStore}
-        params={{ cluster, name }}
+        params={{ cluster, kind,name }}
         sideProps={{
           attrs,
           icon: <Icon name="key" size={28} style={{ verticalAlign: 'middle' }} />,

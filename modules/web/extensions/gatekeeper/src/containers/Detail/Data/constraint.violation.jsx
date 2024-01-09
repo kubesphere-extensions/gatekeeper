@@ -9,7 +9,7 @@ import { get } from 'lodash';
 function ConstraintViolation() {
   const { detail } = useDetailPage();
 
-  const violations = get(detail, `items[0].status.violations`);
+  const violations = get(detail, `status.violations`)
 
   const columns = [
     {

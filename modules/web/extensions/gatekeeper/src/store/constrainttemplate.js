@@ -48,7 +48,7 @@ const yamlRawData = {
   }
 }
 
-const getResourceUrl = params => `/apis/templates.gatekeeper.sh/v1/${module}`; //`clusters/${params?.cluster}/kapis/templates.gatekeeper.sh/v1/${module}`;
+const getResourceUrl = params => `/apis/templates.gatekeeper.sh/v1/${module}`;
 
 const { ...baseStore } = BaseStore({
   module,

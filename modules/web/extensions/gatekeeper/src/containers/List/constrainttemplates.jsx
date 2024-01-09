@@ -7,7 +7,7 @@ import { Group, Pen, Trash } from '@kubed/icons';
 import { DataTable, useCommonActions, useActionMenu, getOriginData } from '@ks-console/shared';
 import { constraintTemplateStore } from '../../store';
 import FORM_TEMPLATES from '../../utils/form.templates';
-import CreateConstraintTemplateModal from '../../components/Modal/CreateContraintTemplateModal';
+import CreateConstraintTemplateModal from '../../components/Modal/CreateConstraintTemplateModal';
 
 const ConstraintTemplateList = () => {
   const { cluster } = useParams();

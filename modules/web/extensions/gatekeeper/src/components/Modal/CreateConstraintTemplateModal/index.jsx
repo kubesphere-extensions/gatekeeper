@@ -3,7 +3,6 @@ import { Modal, Switch } from '@kubed/components';
 import { Group } from '@kubed/icons';
 import CreateConstraintTemplateForm from '../../Forms/CreateConstraintTemplateForm';
 import { SwitchStyle } from './styles';
-// import { getValueObj } from 'extensions/gatekeeper/src/utils/yaml';
 import { yaml } from '@ks-console/shared';
 import { CodeEditor } from '@kubed/code-editor';
 

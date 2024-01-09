@@ -43,7 +43,7 @@ export default [
     ],
   },
   {
-    path: '/clusters/:cluster/gatekeeper.constraints/:name',
+    path: '/clusters/:cluster/gatekeeper.constraints/:kind/:name',
     element: <ConstraintsDetails />,
     children: [
       { index: true, element: <Navigate to="violations" replace /> },

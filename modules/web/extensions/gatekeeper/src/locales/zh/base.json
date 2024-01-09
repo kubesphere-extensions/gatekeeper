@@ -13,14 +13,30 @@
   "CONSTRAINT_VIOLATIONS": "Violations",
   "CONSTRAINT_TEMPLATE_CRD_NAME": "CRD 名称",
   "CONSTRAINT_TEMPLATE_TARGET": "Target",
-  "CONSTRAINT_TEMPLATE_CRD_NAME_EMPTY": "请输入CRD 名称",
+  "CONSTRAINT_TEMPLATE_CRD_NAME_EMPTY": "请输入 CRD 名称",
   "CONSTRAINT_TEMPLATE_TARGETS_EMPTY":"请输入 Tragets",
   "CONSTRAINT_TEMPLATE_CRD_NAME_DESC": "CRD 名称只能包含大写字母、小写字母、数字和连字符（-），必须以小写字母或数字开头和结尾，最长 63 个字符。",
   "INVALID_CONSTRAINT_TEMPLATE_NAME_DESC": "名称无效。CRD 名称只能包含大写字母、小写字母、数字和连字符（-），必须以小写字母或数字开头和结尾，最长 63 个字符。",
 
   "CONSTRAINT_TEMPLATE_TARGET_PLACEHOLDER": "请输入Target",
   "CONSTRAINT_TEMPLATE_REGO_PLACEHOLDER": "请输入限制条件的源代码",
-  "INVALID_EXPRESSION": "请输入正确的Targets",
+  "INVALID_EXPRESSION": "请输入正确的 Targets",
   "constrainttemplates_LOW":"constrainttemplates",
+
+  "CREATE_CONSTRAINT": "创建约束条件",
+  "CONSTRAINT_KIND":"约束条件类型",
+  "CONSTRAINT_KIND_PLACEHOLDER":"请选择约束条件类型",
+  "CONSTRAINT_NAME":"约束条件名称",
+  "CONSTRAINT_NAME_DESC":"约束条件名称只能包含小写字母、数字和连字符（-），必须以小写字母或数字开头和结尾，最长 63 个字符。",
+  "CONSTRAINT_NAME_EMPTY": "请输入约束条件名称",
+  "INVALID_CONSTRAINT_NAME_DESC": "名称无效。CRD 约束条件名称只能包含小写字母、数字和连字符（-），必须以小写字母或数字开头和结尾，最长 63 个字符。",
+  "CONSTRAINT_PARAMETERS": "Parameters",
+  "CONSTRAINT_PARAMETERS_EMPTY": "请输入 Parameters",
+  "NAMESPACE_LABELS": "命名空间标签",
+  "ENFORCEMENT_ACTIONS": "enforcementActions",
+  "ENFORCEMENT_ACTIONS_PLACEHOLDER": "请选择 enforcementActions",
+  "CONSTRAINT_KINDS_PLACEHOLDER": "请填写 Kinds",
+  "INVALID_CONSTRAINT_KINDS": "请输入正确的 Kinds",
+  
   "":""
 }

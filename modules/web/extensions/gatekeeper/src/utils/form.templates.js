@@ -20,8 +20,27 @@ const getConstraintTemplatesTemplate = () => ({
   },
 });
 
+const getConstraintTemplate = ()=>({
+  apiVersion: 'constraints.gatekeeper.sh/v1beta1', 
+  kind: '', 
+  metadata: {},
+  spec: {
+    enforcementActions:'deny',
+    match:{
+      kinds:[
+        {
+          apiGroups:[],
+          kinds:[]
+        }
+      ]
+    },
+    parameters:{}
+  },
+})
+
 const FORM_TEMPLATES = {
   constrainttemplates: getConstraintTemplatesTemplate,
+  constraints:getConstraintTemplate,
 };
 
 const MODULE_KIND_MAP = {

@@ -7,7 +7,7 @@ const menus = [{
   title: 'Gatekeeper',
   icon: 'key',
   assets:'https://open-policy-agent.github.io/gatekeeper/website/img/logo.svg',
-  order: 99,
+  order: 8,
 },{
   parent: 'cluster.gatekeeper',
   name: 'gatekeeper.constrainttemplates',

@@ -19,6 +19,10 @@ const ConstraintList = () => {
 
   const url = getResourceUrl(params,true);
 
+  const callback = () => {
+    constraintRef?.current?.refetch();
+  };
+
   const { editYaml, del } = useCommonActions({
     store: constraintStore,
     params: { cluster },
@@ -62,7 +66,7 @@ const ConstraintList = () => {
       title: t('Name'),
       field: 'name',
       sortable: false,
-      searchable: false,
+      searchable: true,
       render: (value, row) => (
         <Field
           value={value}
@@ -122,10 +126,6 @@ const ConstraintList = () => {
       },
     ],
   });
-
-  const callback = () => {
-    constraintRef?.current?.refetch();
-  };
 
   const handleCreate = data => {
     constraintStore

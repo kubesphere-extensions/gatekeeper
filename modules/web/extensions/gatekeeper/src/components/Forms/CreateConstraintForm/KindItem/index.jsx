@@ -6,8 +6,8 @@ import { isEmpty } from 'lodash'
 
 const KindItem = props => {
   const { onChange, value } = props
-  const [apiGroups, setApiGroups] = useState([])
-  const [kinds, setKinds] = useState([])//Pod
+  const [apiGroups, setApiGroups] = useState(value.apiGroups || [])
+  const [kinds, setKinds] = useState(value.kinds || [])//Pod
 
   useEffect(() => {
     if(!isEmpty(kinds)||!isEmpty(apiGroups)){

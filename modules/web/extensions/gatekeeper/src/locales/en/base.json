@@ -34,7 +34,7 @@
   "CONSTRAINT_PARAMETERS": "Parameters",
   "CONSTRAINT_PARAMETERS_EMPTY": "Please enter Parameters",
   "NAMESPACE_LABELS": "Namespace Selector",
-  "ENFORCEMENT_ACTIONS": "enforcementActions",
+  "ENFORCEMENT_ACTIONS": "enforcementAction",
   "ENFORCEMENT_ACTIONS_PLACEHOLDER": "Please select the enforcement actions",
   "CONSTRAINT_KINDS_PLACEHOLDER": "Please enter the kinds",
   "INVALID_CONSTRAINT_KINDS": "Please enter the correct kinds"

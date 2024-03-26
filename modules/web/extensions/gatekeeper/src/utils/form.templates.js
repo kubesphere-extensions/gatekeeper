@@ -1,13 +1,20 @@
 const getConstraintTemplatesTemplate = () => ({
   apiVersion: 'templates.gatekeeper.sh/v1',
   kind: 'ConstraintTemplate',
-  metadata: {},
+  metadata: {
+    name:''
+  },
   spec: {
     crd: {
       spec: {
-        names: {},
+        names: {
+          kind:null,
+        },
         validations: {
-          openAPIV3Schema: {},
+          openAPIV3Schema: {
+            type:'object',
+            properties:{}
+          },
         },
       },
     },
@@ -23,16 +30,25 @@ const getConstraintTemplatesTemplate = () => ({
 const getConstraintTemplate = ()=>({
   apiVersion: 'constraints.gatekeeper.sh/v1beta1', 
   kind: '', 
-  metadata: {},
+  metadata: {
+    name:'',
+  },
   spec: {
-    enforcementActions:'deny',
+    enforcementAction:'deny',
     match:{
       kinds:[
         {
           apiGroups:[],
-          kinds:[]
+          kinds:[],
         }
-      ]
+      ],
+      namespaces:[{name:""}],
+      namespaceSelector:{
+        matchExpressions:[
+          {key:'',operator:''}
+        ],
+        matchLabels:{},
+      }
     },
     parameters:{}
   },

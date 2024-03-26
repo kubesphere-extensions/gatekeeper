@@ -34,8 +34,8 @@
   "CONSTRAINT_PARAMETERS": "Parameters",
   "CONSTRAINT_PARAMETERS_EMPTY": "请输入 Parameters",
   "NAMESPACE_LABELS": "命名空间标签",
-  "ENFORCEMENT_ACTIONS": "enforcementActions",
-  "ENFORCEMENT_ACTIONS_PLACEHOLDER": "请选择 enforcementActions",
+  "ENFORCEMENT_ACTIONS": "enforcementAction",
+  "ENFORCEMENT_ACTIONS_PLACEHOLDER": "请选择 enforcementAction",
   "CONSTRAINT_KINDS_PLACEHOLDER": "请填写 Kinds",
   "INVALID_CONSTRAINT_KINDS": "请输入正确的 Kinds",
   

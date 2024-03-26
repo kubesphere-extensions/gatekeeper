@@ -35,6 +35,7 @@ const TargetItem =(props)=>{
         name='rego' 
         hasUpload={false}
         hasDownload={false}
+        value={value.rego}
         onChange={handleChangeRego}
       />
 

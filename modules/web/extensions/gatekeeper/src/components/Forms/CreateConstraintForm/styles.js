@@ -1,4 +1,4 @@
-import { Form, FormItem } from '@kubed/components';
+import { Form } from '@kubed/components';
 import styled from 'styled-components';
 
 export const FormWrapper = styled(Form)`
@@ -27,22 +27,13 @@ export const FormItemError = styled.div`
   color: #ca2621;
 `;
 
-export const FormItemWrapper = styled(FormItem)`
-  background:red;
-  :global{
-    .xxx{
-      background:red;
-    }
-  }
-`
-
 export const NamespaceSelectorWrapper = styled.div`
   .form-item{
     padding:12px;
     border-radius: 4px;
     background-color: #f9fbfd;
     &>div{
-      &>div:first-child{
+      &>div:not(:last-child){
         background:#eff4f9;
       }
     }

@@ -5,6 +5,7 @@ import { CodeEditor } from '@kubed/code-editor'
 import CreateConstraintForm from '../../Forms/CreateConstraintForm'
 import { SwitchStyle } from './styles'
 import { yaml } from '@ks-console/shared'
+import { cloneDeep } from 'lodash'
 
 const CreateConstraintModal = ({
   form,
@@ -16,14 +17,8 @@ const CreateConstraintModal = ({
   cluster,
 }) => {
   const [isCodeMode, setIsCodeMode] = useState(false)
-  const [formData, setFormData] = useState(initialValues)
+  const [formData, setFormData] = useState(cloneDeep(initialValues))
   const [yamlData, setYamlData] = useState('')
-
-  useEffect(() => {
-    if (store) {
-      setYamlData(store.yamlRawData)
-    }
-  }, [])
 
   const handleSubmit = () => {
     form
@@ -34,11 +29,20 @@ const CreateConstraintModal = ({
       .catch(() => {})
   }
 
+  const handleChangeEditType=value=>{
+    setIsCodeMode(value)
+    if(value){
+      setYamlData(yaml.getValue(formData))
+    }else{
+      setFormData(yaml.load(yamlData))
+    }
+  }
+
   const renderSwitch = () => {
     return (
       <SwitchStyle>
         <Switch
-          onChange={value => setIsCodeMode(value)}
+          onChange={handleChangeEditType}
           label={t('EDIT_YAML')}
           variant="button"
         />
@@ -70,7 +74,7 @@ const CreateConstraintModal = ({
       ) : (
         <CreateConstraintForm
           form={form}
-          initialValues={initialValues}
+          initialValues={formData}
           onChange={handleChange}
           store={store}
           cluster={cluster}

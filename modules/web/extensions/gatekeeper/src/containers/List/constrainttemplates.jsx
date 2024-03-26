@@ -66,9 +66,9 @@ const ConstraintTemplateList = () => {
   const columns = [
     {
       title: t('Name'),
-      field: 'metadata.name',
+      field: 'name',
       sortable: false,
-      searchable: false,
+      searchable: true,
       render: (value, row) => (
         <Field
           value={value}
@@ -155,7 +155,7 @@ const ConstraintTemplateList = () => {
         format={formatFn}
         serverDataFormat={formatServerData}
         placeholder={t('SEARCH_BY_NAME')}
-        url={getResourceUrl(params)}
+        url={getResourceUrl(params,true)}
         useStorageState={false}
         disableRowSelect={false}
         selectType={false}

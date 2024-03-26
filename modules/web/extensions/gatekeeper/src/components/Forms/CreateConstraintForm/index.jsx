@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Form, FormItem, Input, Select } from '@kubed/components'
-import { get, isEmpty, merge, set } from 'lodash'
+import { FormItem, Input, Select } from '@kubed/components'
+import { get, isEmpty } from 'lodash'
 import {
   Pattern,
   PropertiesInput,
@@ -61,7 +61,7 @@ const CreateConstraintForm = ({
   const handleChange = () => {
     const formData = form.getFieldsValue()
 
-    onChange(merge(initialValues, formData))
+    onChange(formData)
   }
 
   const checkItemValid = item => {
@@ -131,7 +131,7 @@ const CreateConstraintForm = ({
       </FormItem>
 
       <FormItem
-        name={['spec', 'enforcementActions']}
+        name={['spec', 'enforcementAction']}
         label={t('ENFORCEMENT_ACTIONS_PLACEHOLDER')}
         rules={[
           { required: true, message: t('ENFORCEMENT_ACTIONS_PLACEHOLDER') },
@@ -164,18 +164,17 @@ const CreateConstraintForm = ({
       </NamespaceSelectorWrapper>
 
       <NamespaceSelectorWrapper>
-        <FormItemWrapper
-          name={['spec', 'namespaceSelector', 'matchLabels']}
+        <FormItem
+          name={['spec', 'match','namespaceSelector', 'matchLabels']}
           label={t('NAMESPACE_LABELS')}
           validateStatus={error ? 'error' : undefined}
-          className="xxx"
           help={error ? <FormItemError>{error}</FormItemError> : undefined}
         >
           <PropertiesInput
             addText={t('ADD')}
             onError={e => setError(e && e.message ? e.message : '')}
           />
-        </FormItemWrapper>
+        </FormItem>
       </NamespaceSelectorWrapper>
 
       <FormItem

@@ -25,7 +25,13 @@ spec:
       rego: ''
 `
 
-const getResourceUrl = (params) => `${API_VERSIONS[module]}${getPath(params)}/${module}`
+const getResourceUrl = (params,ksVersion) => {
+  if (ksVersion) {
+    return `kapis/templates.gatekeeper.sh/v1${getPath(params)}/${module}`;
+  } else {
+    return `${API_VERSIONS[module]}${getPath(params)}/${module}`;
+  }
+}
 
 const { ...baseStore } = BaseStore({
   module,

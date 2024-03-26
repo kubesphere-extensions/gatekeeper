@@ -26,7 +26,7 @@ const CreateConstraintTemplateForm = ({
     const name = get(formData, `spec.crd.spec.names.kind`)?.toLowerCase();
     set(formData, 'metadata.name', name);
 
-    onChange(merge(initialValues, formData));
+    onChange(merge({},initialValues, formData));
   };
 
   const checkItemValid = item => {

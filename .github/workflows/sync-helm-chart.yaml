@@ -30,18 +30,21 @@ jobs:
       - run: |
           git config --global user.email "ci-bot@kubesphere.io"
           git config --global user.name "ks-ci-bot"
-          git clone git@github.com:kubesphere-extensions/ks-extensions.git
+          git clone --depth 1 git@github.com:ks-ci-bot/ks-extensions.git -b main
+          git remote add upstream git@github.com:kubesphere-extensions/ks-extensions.git
+          git fetch upstream main
+          git checkout -b sync/gatekeeper/${GITHUB_REF#refs/*/} upstream/main
           rm -rf ks-extensions/gatekeeper
           OUTPUT=ks-extensions/gatekeeper make package
           cd ks-extensions/
           git add .
           git commit -m "update gatekeeper helm chart"
-          git push origin master:sync/gatekeeper/${GITHUB_REF#refs/*/} --force
+          git push origin main:sync/gatekeeper/${GITHUB_REF#refs/*/} --force
 
       - env:
           GH_TOKEN: ${{ secrets.CIBOT_ACCESS_TOKEN }}
         run: |
           cd ks-extensions/
-          if [[ $(gh pr ls -H sync/gatekeeper/${GITHUB_REF#refs/*/} -B master) == "" ]]; then
-            gh pr create -H sync/gatekeeper/${GITHUB_REF#refs/*/} -B master --title "Update gatekeeper helm chart from ${GITHUB_REF#refs/*/}" --body "Update gatekeeper helm chart"
+          if [[ $(gh pr ls -H sync/gatekeeper/${GITHUB_REF#refs/*/} -B main) == "" ]]; then
+            gh pr create -H sync/gatekeeper/${GITHUB_REF#refs/*/} -B main --title "Update gatekeeper helm chart from ${GITHUB_REF#refs/*/}" --body "Update gatekeeper helm chart"
           fi

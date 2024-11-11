@@ -31,12 +31,14 @@ jobs:
           git config --global user.email "ci-bot@kubesphere.io"
           git config --global user.name "ks-ci-bot"
           git clone --depth 1 git@github.com:ks-ci-bot/ks-extensions.git -b main
+          pushd ks-extensions
           git remote add upstream git@github.com:kubesphere-extensions/ks-extensions.git
           git fetch upstream main
           git checkout -b sync/gatekeeper/${GITHUB_REF#refs/*/} upstream/main
+          popd
           rm -rf ks-extensions/gatekeeper
           OUTPUT=ks-extensions/gatekeeper make package
-          cd ks-extensions/
+          pushd ks-extensions
           git add .
           git commit -m "update gatekeeper helm chart"
           git push origin main:sync/gatekeeper/${GITHUB_REF#refs/*/} --force

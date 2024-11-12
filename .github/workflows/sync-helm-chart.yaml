@@ -41,7 +41,7 @@ jobs:
           pushd ks-extensions
           git add .
           git commit -m "update gatekeeper helm chart"
-          git push origin main:sync/gatekeeper/${GITHUB_REF#refs/*/} --force
+          git push origin sync/gatekeeper/${GITHUB_REF#refs/*/} --force
 
       - env:
           GH_TOKEN: ${{ secrets.CIBOT_ACCESS_TOKEN }}

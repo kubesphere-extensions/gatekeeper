@@ -1,11 +1,14 @@
 package main
 
 import (
-	"api/query"
 	"context"
 	"encoding/json"
 	"flag"
 	"fmt"
+	"net/http"
+	"strconv"
+	"strings"
+
 	"github.com/gorilla/mux"
 	gatekeeperv3 "github.com/open-policy-agent/gatekeeper/v3/apis"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -18,11 +21,11 @@ import (
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/klog/v2"
 	"k8s.io/klog/v2/klogr"
-	"net/http"
 	"sigs.k8s.io/controller-runtime/pkg/client/config"
 	"sigs.k8s.io/controller-runtime/pkg/cluster"
 	"sigs.k8s.io/controller-runtime/pkg/log"
-	"strings"
+
+	"api/query"
 )
 
 const constraintsGV = "constraints.gatekeeper.sh/v1beta1"
@@ -98,8 +101,9 @@ func (h *listConstraintsHandler) ServeHTTP(w http.ResponseWriter, req *http.Requ
 	}
 
 	list := &unstructured.UnstructuredList{}
-	filtered, remainingItemCount, _ := query.DefaultList(objects, query.ParseQueryParameter(req), DefaultCompare, DefaultFilter)
+	filtered, remainingItemCount, totalCount := query.DefaultList(objects, query.ParseQueryParameter(req), DefaultCompare, DefaultFilter)
 	list.SetRemainingItemCount(remainingItemCount)
+	list.SetContinue(strconv.Itoa(int(*totalCount)))
 
 	if err := meta.SetList(list, filtered); err != nil {
 		http.Error(w, fmt.Sprintf("Failed to encode response: %s", err), http.StatusInternalServerError)

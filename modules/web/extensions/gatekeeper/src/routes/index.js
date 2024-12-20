@@ -21,35 +21,35 @@ export default [
         path: '/clusters/:cluster/gatekeeper.constraints',
         element: <ConstraintList />,
       },
-    ],
-  },
-  {
-    path: '/clusters/:cluster/gatekeeper.constrainttemplates/:name',
-    element: <ConstraintTemplateDetails />,
-    children: [
-      { index: true, element: <Navigate to="targets" replace /> },
       {
-        path: 'targets',
-        element: <ConstraintTemplateTargets />,
+        path: '/clusters/:cluster/gatekeeper.constrainttemplates/:name',
+        element: <ConstraintTemplateDetails />,
+        children: [
+          { index: true, element: <Navigate to="targets" replace /> },
+          {
+            path: 'targets',
+            element: <ConstraintTemplateTargets />,
+          },
+          {
+            path: 'status',
+            element: <ConstraintTemplateStatus />,
+          },
+          {
+            path: 'constraints',
+            element: <ConstraintTemplateConstraints />,
+          },
+        ],
       },
       {
-        path: 'status',
-        element: <ConstraintTemplateStatus />,
-      },
-      {
-        path: 'constraints',
-        element: <ConstraintTemplateConstraints />,
-      },
-    ],
-  },
-  {
-    path: '/clusters/:cluster/gatekeeper.constraints/:kind/:name',
-    element: <ConstraintsDetails />,
-    children: [
-      { index: true, element: <Navigate to="violations" replace /> },
-      {
-        path: 'violations',
-        element: <ConstraintViolation />,
+        path: '/clusters/:cluster/gatekeeper.constraints/:kind/:name',
+        element: <ConstraintsDetails />,
+        children: [
+          { index: true, element: <Navigate to="violations" replace /> },
+          {
+            path: 'violations',
+            element: <ConstraintViolation />,
+          },
+        ],
       },
     ],
   },

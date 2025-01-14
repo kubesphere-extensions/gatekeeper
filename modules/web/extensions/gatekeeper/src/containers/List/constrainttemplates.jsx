@@ -31,10 +31,12 @@ const ConstraintTemplateList = () => {
     };
   };
   function formatServerData(serverData) {
+    const totalItems = Number(serverData.metadata.continue) || 
+          serverData.items.length || 0;
     return {
       ...serverData,
       items: serverData.items,
-      totalItems: serverData.metadata.continue || 0,
+      totalItems: totalItems,
     };
   }
 

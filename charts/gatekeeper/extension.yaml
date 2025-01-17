@@ -21,7 +21,7 @@ sources:
 - https://github.com/kubesphere-extensions/gatekeeper
 - https://github.com/open-policy-agent/gatekeeper
 kubeVersion: '>=1.19.0-0'
-ksVersion: '>=4.1.0-0'
+ksVersion: '>=4.1.2-0'
 maintainers:
 - name: KubeSphere
   email: kubesphere@yunify.com

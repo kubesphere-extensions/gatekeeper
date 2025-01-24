@@ -5,10 +5,13 @@ Please do not delete this line of version tag
 -->
 ## v1.0.3
 
+### Features
+
+- Built-in Gatekeeper template
+
 ### Enhancements
 
 - Adapt for KSE v4.1.3、v4.2.0
-- Built-in Gatekeeper template
 - Fix pagination exception
 
 <!---

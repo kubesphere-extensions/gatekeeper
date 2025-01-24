@@ -5,10 +5,13 @@ Please do not delete this line of version tag
 -->
 ## v1.0.3
 
-### Enhancements
+### 新特性
+
+- 内置Gatekeeper模版
+
+### 优化
 
 - 适配 KSE v4.1.3、v4.2.0
-- 内置Gatekeeper模版
 - 修复列表分页异常
 
 <!---

@@ -44,7 +44,7 @@ spec:
           
           # Apply all yaml files
           {{- if .Values.templates.fullInstall }}
-          echo "full installed"
+          echo "full install"
           for file in *.yaml; do
             if [ -f "$file" ]; then
               echo "Applying $file..."

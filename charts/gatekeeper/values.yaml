@@ -277,4 +277,6 @@ agent:
       repository: kubesphere/kubectl
       tag: "v1.27.12"
       pullPolicy: IfNotPresent
-
+  templates:
+    fullInstall: false  # install all templates.
+    customInstall: []   # templates need to install. Default: [].

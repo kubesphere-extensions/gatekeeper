@@ -4,11 +4,19 @@
 BASE_URL="https://raw.githubusercontent.com/open-policy-agent/gatekeeper-library/master/library"
 TEMP_DIR="tpl-tmp"
 FINAL_DIR="charts/gatekeeper/charts/agent/files"
+VALUES_FILE="charts/gatekeeper/charts/agent/values.yaml"
 
 # Create directories if they don't exist
 rm -rf "$TEMP_DIR"  # Clean up any existing temp directory
 mkdir -p "$TEMP_DIR"
 mkdir -p "$FINAL_DIR"
+
+# Array to store all template names
+TEMPLATE_NAMES=charts/gatekeeper/templates.txt
+
+if [ -f "$TEMPLATE_NAMES" ]; then
+  rm -f TEMPLATE_NAMES
+fi
 
 # Download function
 download_templates() {
@@ -27,6 +35,7 @@ download_templates() {
         
         if [ "$HTTP_RESPONSE" = "200" ]; then
             echo "Successfully downloaded and renamed to ${dir}.yaml"
+            echo "$dir" >> $TEMPLATE_NAMES
         else
             echo "Failed to download template for $dir (HTTP Status: $HTTP_RESPONSE)"
             rm -f "$TEMP_DIR/${dir}.yaml"
@@ -54,5 +63,4 @@ fi
 mv "gatekeeper-templates.tar.gz" "../$FINAL_DIR/"
 cd ..
 rm -rf "$TEMP_DIR"
-
 echo "Download completed. Templates archive is saved in $FINAL_DIR/gatekeeper-templates.tar.gz"

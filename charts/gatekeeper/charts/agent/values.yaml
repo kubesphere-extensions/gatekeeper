@@ -48,3 +48,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+templates:
+  # install all templates. Default: false.
+  fullInstall: false
+  # templates need to install. Default: [].
+  customInstall: []

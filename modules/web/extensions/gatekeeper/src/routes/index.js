@@ -9,6 +9,41 @@ import ConstraintTemplateConstraints from '../containers/Detail/Data/constraintt
 import ConstraintViolation from '../containers/Detail/Data/constraint.violation';
 import ConstraintsDetails from '../containers/Detail/constraints';
 
+const detailRouter = [
+  {
+    path: '/clusters/:cluster/gatekeeper.constrainttemplates/:name',
+    element: <ConstraintTemplateDetails />,
+    children: [
+      { index: true, element: <Navigate to="targets" replace /> },
+      {
+        path: 'targets',
+        element: <ConstraintTemplateTargets />,
+      },
+      {
+        path: 'status',
+        element: <ConstraintTemplateStatus />,
+      },
+      {
+        path: 'constraints',
+        element: <ConstraintTemplateConstraints />,
+      },
+    ],
+  },
+  {
+    path: '/clusters/:cluster/gatekeeper.constraints/:kind/:name',
+    element: <ConstraintsDetails />,
+    children: [
+      { index: true, element: <Navigate to="violations" replace /> },
+      {
+        path: 'violations',
+        element: <ConstraintViolation />,
+      },
+    ],
+  },
+];
+
+const ksVersion = Number(globals?.ksConfig?.ksVersion?.slice(1).split('.').slice(0, 2).join('.'));
+
 export default [
   {
     parentRoute: '/clusters/:cluster',
@@ -21,36 +56,8 @@ export default [
         path: '/clusters/:cluster/gatekeeper.constraints',
         element: <ConstraintList />,
       },
-      {
-        path: '/clusters/:cluster/gatekeeper.constrainttemplates/:name',
-        element: <ConstraintTemplateDetails />,
-        children: [
-          { index: true, element: <Navigate to="targets" replace /> },
-          {
-            path: 'targets',
-            element: <ConstraintTemplateTargets />,
-          },
-          {
-            path: 'status',
-            element: <ConstraintTemplateStatus />,
-          },
-          {
-            path: 'constraints',
-            element: <ConstraintTemplateConstraints />,
-          },
-        ],
-      },
-      {
-        path: '/clusters/:cluster/gatekeeper.constraints/:kind/:name',
-        element: <ConstraintsDetails />,
-        children: [
-          { index: true, element: <Navigate to="violations" replace /> },
-          {
-            path: 'violations',
-            element: <ConstraintViolation />,
-          },
-        ],
-      },
+      ...(ksVersion > 4.1 ? detailRouter : []),
     ],
   },
+  ...(ksVersion <= 4.1 ? detailRouter : []),
 ];

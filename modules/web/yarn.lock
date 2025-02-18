@@ -1478,26 +1478,26 @@
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
 "@ks-console/appstore@^0.0.0-canary.20250115094752":
-  version "0.0.0-canary.20250115094752"
-  resolved "https://registry.npmjs.org/@ks-console/appstore/-/appstore-0.0.0-canary.20250115094752.tgz#5fa8088c9d1f697b72e61b106d456fedfccc57fb"
-  integrity sha512-sg2ofNznZG0wYIgX0IUfk3dHRgAq6xwejwRRZsdLqJ18sehCB4Ts5UFKAlq7vPRL80KrxfNFt9orRhKIyjHVmA==
+  version "0.0.0-canary.20250218060231"
+  resolved "https://registry.npmjs.org/@ks-console/appstore/-/appstore-0.0.0-canary.20250218060231.tgz#bca179d7318538c4c2089bb224339ad3f19a5191"
+  integrity sha512-4/OufR79yX6ZMkBDFxmuCV4wYUO+umQhPj6ZbUe6ftttlCaVbRRgkHL24Z7602DhprnAbqfzYgMIziRWU+3E+g==
   dependencies:
     nanoid "^3.0.0"
 
 "@ks-console/bootstrap@^0.0.0-canary.20250115094752":
-  version "0.0.0-canary.20250115094752"
-  resolved "https://registry.npmjs.org/@ks-console/bootstrap/-/bootstrap-0.0.0-canary.20250115094752.tgz#66a932c806ec9aa38bdbdeffcbedec87436c3bd6"
-  integrity sha512-vAGiVZhdHdEr1QxhDZhUAkPkN5RADcxnX97TTl6uySLnNGtLLyW+UUI4qVyAySdVX1Z6jLVGLpelYXLmHHQywA==
+  version "0.0.0-canary.20250218060231"
+  resolved "https://registry.npmjs.org/@ks-console/bootstrap/-/bootstrap-0.0.0-canary.20250218060231.tgz#9077c6494ae9b2df195abb5669adbaf86662a304"
+  integrity sha512-QrX7XAbew87Iouo7vNcOiPDfFRCQ5wlUyfvTC2cOXXjFzZvulGeBSKVAHnEK6DyF2vOQMWT7MqvUuJABkFVwCw==
   dependencies:
-    "@ks-console/locales" "0.0.0-canary.20250115094752"
+    "@ks-console/locales" "0.0.0-canary.20250218060231"
     mustache "^4.2.0"
     npm-checky "^1.0.4"
     path-browserify "^1.0.1"
 
 "@ks-console/console@^0.0.0-canary.20250115094752":
-  version "0.0.0-canary.20250115094752"
-  resolved "https://registry.npmjs.org/@ks-console/console/-/console-0.0.0-canary.20250115094752.tgz#10997ca04bd24b7a43853a7b6bfcb9b97be80a94"
-  integrity sha512-l4vQ3P6mbKjO1rWhMw7w60U3tgFfKS8R2i6OMs1tP3+FQCJzWBaS8fpA+bduCv8qBgcWrBvRIoySXU6vlvgUQA==
+  version "0.0.0-canary.20250218060231"
+  resolved "https://registry.npmjs.org/@ks-console/console/-/console-0.0.0-canary.20250218060231.tgz#0f759c782de64217ce05076f6f3fcf66bf9ca385"
+  integrity sha512-aP+Z2kWI78T7pj9D2gNjwohWhiKYAyByTF94ZQgD4ec+O1JztcAGBPzPQRX/573XLfuM7yLmSklzsnToAmeV1w==
   dependencies:
     "@dnd-kit/core" "^6.1.0"
     "@dnd-kit/sortable" "^8.0.0"
@@ -1515,9 +1515,9 @@
     wujie-react "^1.0.22"
 
 "@ks-console/core@^0.0.0-canary.20250115094752":
-  version "0.0.0-canary.20250115094752"
-  resolved "https://registry.npmjs.org/@ks-console/core/-/core-0.0.0-canary.20250115094752.tgz#405c64187475aac1236a8ddde941c3b1e742c316"
-  integrity sha512-gC4Z1nIN85OsaFELg9jeADE7CbJZHjjw3BwcpIJsJrSjmjRQ/UXi9jZ1lCCr5bXdj7VsnONF4J6u8kXFwEt5WA==
+  version "0.0.0-canary.20250218060231"
+  resolved "https://registry.npmjs.org/@ks-console/core/-/core-0.0.0-canary.20250218060231.tgz#2932905114e83b7066f357ff505c0bd7508889c5"
+  integrity sha512-0BubwG+OTdg0h6flK88Kz2HGPog9Gz0AF6sdBRq+9CC8WGTg3x+qpEgHM/BiaDbN/KvTjVrK+olqMVNTUpETYQ==
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@tanstack/react-table" "^8.17.3"
@@ -1536,19 +1536,18 @@
     type-fest "^4.13.1"
     wujie-react "^1.0.22"
 
-"@ks-console/locales@0.0.0-canary.20250115094752", "@ks-console/locales@^0.0.0-canary.20250115094752":
-  version "0.0.0-canary.20250115094752"
-  resolved "https://registry.npmjs.org/@ks-console/locales/-/locales-0.0.0-canary.20250115094752.tgz#46a8fab5e5292134f1a93e38bbd3357ba3fc5a26"
-  integrity sha512-w7NA50cyOH3NHRBVI0OPa/HlzL6DVWe/J8EhPq6Ytv8fvM8MP0QlOJ3w3e0EEnH70DAvVvLjt49jidg5GDGglw==
+"@ks-console/locales@0.0.0-canary.20250218060231", "@ks-console/locales@^0.0.0-canary.20250115094752":
+  version "0.0.0-canary.20250218060231"
+  resolved "https://registry.npmjs.org/@ks-console/locales/-/locales-0.0.0-canary.20250218060231.tgz#2afff2e6e395672f0820c410bcfb8d52d3a96885"
+  integrity sha512-cu4pb+YV70XRk5pdZLTx54kBeX/pJn1bYIYTbuV0+R+N5l9b57WJPYEWTPZQzngK1wiFCoMxwUK5GO1CBZEruw==
 
 "@ks-console/server@^0.0.0-canary.20250115094752":
-  version "0.0.0-canary.20250115094752"
-  resolved "https://registry.npmjs.org/@ks-console/server/-/server-0.0.0-canary.20250115094752.tgz#5079e62c15c43ab36b0cb9383cfb50625cc909c6"
-  integrity sha512-Iz0ULvX627AeMx+4QtHBMN1rsfjP+QMHe0ubYev3LGMJ6rtAf4pQDD9jdKwvw/OKjqA5QVsn6rC0baB+mb8m8w==
+  version "0.0.0-canary.20250218060231"
+  resolved "https://registry.npmjs.org/@ks-console/server/-/server-0.0.0-canary.20250218060231.tgz#bef4eb3d6cdc6c3b2e07b5e32761b607420d19ae"
+  integrity sha512-HOSSVlxDc//s9MvzBKNbvrBiHyPx1S9pxwOadna/u9/SEH3sV+UPxVS+aSgYkRoQoGaLem9cl3Y/HEh2EK0XJA==
   dependencies:
     compression "^1.7.4"
     dayjs "^1.10.7"
-    dnscache "^1.0.2"
     http-proxy "^1.18.1"
     js-yaml "^3.13.1"
     jwt-decode "^2.2.0"
@@ -1572,9 +1571,9 @@
     ws "^8.18.0"
 
 "@ks-console/shared@^0.0.0-canary.20250115094752":
-  version "0.0.0-canary.20250115094752"
-  resolved "https://registry.npmjs.org/@ks-console/shared/-/shared-0.0.0-canary.20250115094752.tgz#2bae12b9f007f09f2a4e0c4ecb2f951aed27acc8"
-  integrity sha512-AJeh54QikjIJ0stmwLj9rnzyZGtp3Sp7UPKKpJOvlKJuwAg1DW44gX05CPLhfoGZwNuuGEf3YMt4XmU3LjyAjw==
+  version "0.0.0-canary.20250218060231"
+  resolved "https://registry.npmjs.org/@ks-console/shared/-/shared-0.0.0-canary.20250218060231.tgz#8f68918d78b1c36e43428de71010e3b31b5fa04d"
+  integrity sha512-Rfa1vX/f56acYRAihYHyPU6KECVArGzcgVBOfre4uDoWZDvW0ppSw+q6CXKXKfwbRYIuy5AHi5Mzhgmd+9sL8w==
   dependencies:
     "@tanstack/react-table" "^8.17.3"
     async-validator "4.2.5"
@@ -3108,11 +3107,6 @@ arrify@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-2.0.1.tgz#c9655e9331e0abcd588d2a7cad7e9956f66701fa"
   integrity sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==
-
-asap@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
-  integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
 assign-symbols@^1.0.0:
   version "1.0.0"
@@ -4750,14 +4744,6 @@ dns-packet@^5.2.2:
   integrity sha512-rza3UH1LwdHh9qyPXp8lkwpjSNk/AMD3dPytUoRoqnypDUhY0xvbdmVhWOfxO68frEfV9BU8V12Ez7ZsHGZpCQ==
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
-
-dnscache@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/dnscache/-/dnscache-1.0.2.tgz#fd3c24d66c141625f594c77be7a8dafee2a66c8a"
-  integrity sha512-2FFKzmLGOnD+Y378bRKH+gTjRMuSpH7OKgPy31KjjfCoKZx7tU8Dmqfd/3fhG2d/4bppuN8/KtWMUZBAcUCRnQ==
-  dependencies:
-    asap "^2.0.6"
-    lodash.clone "^4.5.0"
 
 doctrine@^2.1.0:
   version "2.1.0"
@@ -6480,7 +6466,7 @@ ignore@^5.1.8, ignore@^5.2.0:
 
 immer@^9.0.16:
   version "9.0.21"
-  resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.21.tgz#1e025ea31a40f24fb064f1fef23e931496330176"
+  resolved "https://registry.npmjs.org/immer/-/immer-9.0.21.tgz#1e025ea31a40f24fb064f1fef23e931496330176"
   integrity sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==
 
 immutable@^4.0.0:
@@ -7626,11 +7612,6 @@ lockfile@^1.0:
   integrity sha512-cvbTwETRfsFh4nHsL1eGWapU1XFi5Ot9E85sWAwia7Y7EgB7vfqcZhTKZ+l7hCGxSPoushMv5GKhT5PdLv03WA==
   dependencies:
     signal-exit "^3.0.2"
-
-lodash.clone@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.clone/-/lodash.clone-4.5.0.tgz#195870450f5a13192478df4bc3d23d2dea1907b6"
-  integrity sha512-GhrVeweiTD6uTmmn5hV/lzgCQhccwReIVRLHp7LT4SopOjqEZ5BbX8b5WWEtAKasjmy8hR7ZPwsYlxRCku5odg==
 
 lodash.debounce@^4.0.8:
   version "4.0.8"

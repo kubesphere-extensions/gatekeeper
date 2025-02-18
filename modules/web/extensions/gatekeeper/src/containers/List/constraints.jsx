@@ -3,13 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 
 import { Banner, Field, useForm, notify } from '@kubed/components';
 import { Group, Pen, Trash } from '@kubed/icons';
-import {
-  DataTable,
-  useCommonActions,
-  getOriginData,
-  useActionMenu,
-  PageLayout,
-} from '@ks-console/shared';
+import { PageLayout } from '../../components/Layouts/PageLayout';
+import { DataTable, useCommonActions, getOriginData, useActionMenu } from '@ks-console/shared';
 import { constraintStore } from '../../store';
 import FORM_TEMPLATES from '../../utils/form.templates';
 import CreateConstraintModal from '../../components/Modal/CreateConstraintModal';
@@ -55,7 +50,7 @@ const ConstraintList = () => {
           del({
             onOk: () => {
               constraintStore
-                .delete(item)
+                .delete({ ...item, cluster })
                 .then(res => {
                   notify.success(t('DELETED_SUCCESSFULLY'));
                   callback('delete');
@@ -108,8 +103,7 @@ const ConstraintList = () => {
   };
 
   function formatServerData(serverData) {
-    const totalItems = Number(serverData.metadata.continue) || 
-          serverData.items.length || 0;
+    const totalItems = Number(serverData.metadata.continue) || serverData.items.length || 0;
     return {
       ...serverData,
       items: serverData.items,

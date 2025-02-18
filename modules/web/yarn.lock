@@ -1477,27 +1477,27 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@ks-console/appstore@^0.0.0-canary.20241217072707":
-  version "0.0.0-canary.20241217072707"
-  resolved "https://registry.npmjs.org/@ks-console/appstore/-/appstore-0.0.0-canary.20241217072707.tgz#8ce43084299d83baea376d52e92fc97cc8c17092"
-  integrity sha512-7qNQaLQgrDEsYFW1IVUMRK753kn2SATa+/QCMykII1SmcYGAduxcMwmGkij3NNIYGTuVFN+iL76WhaJRZJ9gZQ==
+"@ks-console/appstore@^0.0.0-canary.20250115094752":
+  version "0.0.0-canary.20250115094752"
+  resolved "https://registry.npmjs.org/@ks-console/appstore/-/appstore-0.0.0-canary.20250115094752.tgz#5fa8088c9d1f697b72e61b106d456fedfccc57fb"
+  integrity sha512-sg2ofNznZG0wYIgX0IUfk3dHRgAq6xwejwRRZsdLqJ18sehCB4Ts5UFKAlq7vPRL80KrxfNFt9orRhKIyjHVmA==
   dependencies:
     nanoid "^3.0.0"
 
-"@ks-console/bootstrap@^0.0.0-canary.20241217072707":
-  version "0.0.0-canary.20241217072707"
-  resolved "https://registry.npmjs.org/@ks-console/bootstrap/-/bootstrap-0.0.0-canary.20241217072707.tgz#240dfd8db38fb24234e57387079d14b6e5d05ad5"
-  integrity sha512-XlrD7l0YE7zMbgxhp2GGOBXTLW9XXsLojJRJJmM6Vek4swO1hBkNoMvpoWhxG6mVNGkr8Yo4ObjQSBbpAjDhHw==
+"@ks-console/bootstrap@^0.0.0-canary.20250115094752":
+  version "0.0.0-canary.20250115094752"
+  resolved "https://registry.npmjs.org/@ks-console/bootstrap/-/bootstrap-0.0.0-canary.20250115094752.tgz#66a932c806ec9aa38bdbdeffcbedec87436c3bd6"
+  integrity sha512-vAGiVZhdHdEr1QxhDZhUAkPkN5RADcxnX97TTl6uySLnNGtLLyW+UUI4qVyAySdVX1Z6jLVGLpelYXLmHHQywA==
   dependencies:
-    "@ks-console/locales" "0.0.0-canary.20241217072707"
+    "@ks-console/locales" "0.0.0-canary.20250115094752"
     mustache "^4.2.0"
     npm-checky "^1.0.4"
     path-browserify "^1.0.1"
 
-"@ks-console/console@^0.0.0-canary.20241217072707":
-  version "0.0.0-canary.20241217072707"
-  resolved "https://registry.npmjs.org/@ks-console/console/-/console-0.0.0-canary.20241217072707.tgz#c23253e5992b032f662a767d049a71ff94f20639"
-  integrity sha512-zShxdEGPOD4V6mZ6BQJ4yj0MtFPpd5n9V8pMQaAUrwCqKoS9BrTegRn9fQSDqCJlUDpNluPz5JfV/oV+UqaXvw==
+"@ks-console/console@^0.0.0-canary.20250115094752":
+  version "0.0.0-canary.20250115094752"
+  resolved "https://registry.npmjs.org/@ks-console/console/-/console-0.0.0-canary.20250115094752.tgz#10997ca04bd24b7a43853a7b6bfcb9b97be80a94"
+  integrity sha512-l4vQ3P6mbKjO1rWhMw7w60U3tgFfKS8R2i6OMs1tP3+FQCJzWBaS8fpA+bduCv8qBgcWrBvRIoySXU6vlvgUQA==
   dependencies:
     "@dnd-kit/core" "^6.1.0"
     "@dnd-kit/sortable" "^8.0.0"
@@ -1514,12 +1514,13 @@
     react-textarea-autosize "^8.3.2"
     wujie-react "^1.0.22"
 
-"@ks-console/core@^0.0.0-canary.20241217072707":
-  version "0.0.0-canary.20241217072707"
-  resolved "https://registry.npmjs.org/@ks-console/core/-/core-0.0.0-canary.20241217072707.tgz#f95831106010440fc95dc0aa99c00127480de207"
-  integrity sha512-UzrIDZwcDyjnTToEkzuFZ+6bwZxC1gsf7y/99lY3FQvPi58eLw8cJ4xT8A+YeKA/3z4ZC6uLRy/rGqO9EWZ/Zw==
+"@ks-console/core@^0.0.0-canary.20250115094752":
+  version "0.0.0-canary.20250115094752"
+  resolved "https://registry.npmjs.org/@ks-console/core/-/core-0.0.0-canary.20250115094752.tgz#405c64187475aac1236a8ddde941c3b1e742c316"
+  integrity sha512-gC4Z1nIN85OsaFELg9jeADE7CbJZHjjw3BwcpIJsJrSjmjRQ/UXi9jZ1lCCr5bXdj7VsnONF4J6u8kXFwEt5WA==
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
+    "@tanstack/react-table" "^8.17.3"
     clean-deep "^3.4.0"
     embla-carousel-react "^8.0.0-rc11"
     file-saver "^2.0.5"
@@ -1535,15 +1536,15 @@
     type-fest "^4.13.1"
     wujie-react "^1.0.22"
 
-"@ks-console/locales@0.0.0-canary.20241217072707", "@ks-console/locales@^0.0.0-canary.20241217072707":
-  version "0.0.0-canary.20241217072707"
-  resolved "https://registry.npmjs.org/@ks-console/locales/-/locales-0.0.0-canary.20241217072707.tgz#3206c47265f5ef0ff794de7c6cfb6316b49ad6d7"
-  integrity sha512-OoWfqb7OB4BUl00Axdb+NWeBIu0U7IIa3lPZ8Tel+wjF67cXwYsbm7unE1/ZqZpOWi1ty5JDRdNpkCx0obfLWw==
+"@ks-console/locales@0.0.0-canary.20250115094752", "@ks-console/locales@^0.0.0-canary.20250115094752":
+  version "0.0.0-canary.20250115094752"
+  resolved "https://registry.npmjs.org/@ks-console/locales/-/locales-0.0.0-canary.20250115094752.tgz#46a8fab5e5292134f1a93e38bbd3357ba3fc5a26"
+  integrity sha512-w7NA50cyOH3NHRBVI0OPa/HlzL6DVWe/J8EhPq6Ytv8fvM8MP0QlOJ3w3e0EEnH70DAvVvLjt49jidg5GDGglw==
 
-"@ks-console/server@^0.0.0-canary.20241217072707":
-  version "0.0.0-canary.20241217072707"
-  resolved "https://registry.npmjs.org/@ks-console/server/-/server-0.0.0-canary.20241217072707.tgz#f1901b5b0a3b6282774e3f1b16478c927465eda9"
-  integrity sha512-ogSfvSrHqvi0AA9AXJkgNExKGWw6jRXuV+0L/AlIplAP3/pKBrr3rDt+Yl2wsOxHR7aHVu5HFtyJW3hD/KOiIQ==
+"@ks-console/server@^0.0.0-canary.20250115094752":
+  version "0.0.0-canary.20250115094752"
+  resolved "https://registry.npmjs.org/@ks-console/server/-/server-0.0.0-canary.20250115094752.tgz#5079e62c15c43ab36b0cb9383cfb50625cc909c6"
+  integrity sha512-Iz0ULvX627AeMx+4QtHBMN1rsfjP+QMHe0ubYev3LGMJ6rtAf4pQDD9jdKwvw/OKjqA5QVsn6rC0baB+mb8m8w==
   dependencies:
     compression "^1.7.4"
     dayjs "^1.10.7"
@@ -1570,10 +1571,10 @@
     stream-array "^1.1.2"
     ws "^8.18.0"
 
-"@ks-console/shared@^0.0.0-canary.20241217072707":
-  version "0.0.0-canary.20241217072707"
-  resolved "https://registry.npmjs.org/@ks-console/shared/-/shared-0.0.0-canary.20241217072707.tgz#cf87fb9bb8c72fcfcfa56e9305d7460650a5825f"
-  integrity sha512-42+rV1EjmiE7DVi+Nv5jpEDE1UN9rxeWfD0U0SGf9MVKy88W/r3P8kaosBZa14UOxfsvfbgtsRMHMjQjNbqTMw==
+"@ks-console/shared@^0.0.0-canary.20250115094752":
+  version "0.0.0-canary.20250115094752"
+  resolved "https://registry.npmjs.org/@ks-console/shared/-/shared-0.0.0-canary.20250115094752.tgz#2bae12b9f007f09f2a4e0c4ecb2f951aed27acc8"
+  integrity sha512-AJeh54QikjIJ0stmwLj9rnzyZGtp3Sp7UPKKpJOvlKJuwAg1DW44gX05CPLhfoGZwNuuGEf3YMt4XmU3LjyAjw==
   dependencies:
     "@tanstack/react-table" "^8.17.3"
     async-validator "4.2.5"
@@ -1588,6 +1589,7 @@
     react-infinite-scroll-hook "^4.1.1"
     react-markdown "^7.1.1"
     react-table "^7.7.0"
+    rehype-slug "^6.0.0"
     remark-gfm "^3.0.1"
     semver "^7.6.0"
     warning-header-parser "^2.0.0"
@@ -2133,6 +2135,13 @@
   dependencies:
     "@types/unist" "^2"
 
+"@types/hast@^3.0.0":
+  version "3.0.4"
+  resolved "https://registry.npmjs.org/@types/hast/-/hast-3.0.4.tgz#1d6b39993b82cea6ad783945b0508c25903e15aa"
+  integrity sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==
+  dependencies:
+    "@types/unist" "*"
+
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -2391,6 +2400,11 @@
   integrity sha512-GkewRA4i5oXacU/n4MA9+bLgt5/L3F1mKrYvFGm7r2ouLXhRKjuWwo9XHNnbx6WF3vlGW21S3fCvgqxvxXXc5g==
   dependencies:
     source-map "^0.6.1"
+
+"@types/unist@*", "@types/unist@^3.0.0":
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/@types/unist/-/unist-3.0.3.tgz#acaab0f919ce69cce629c2d4ed2eb4adc1b6c20c"
+  integrity sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==
 
 "@types/unist@^2", "@types/unist@^2.0.0":
   version "2.0.7"
@@ -5946,6 +5960,11 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha512-Ln0UQDlxH1BapMu3GPtf7CuYNwRZf2gwCuPqbyG6pB8WfmFpzqcy4xtAaAMUhnNqjMKTiCPZG2oMT3YSx8U2NA==
 
+github-slugger@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/github-slugger/-/github-slugger-2.0.0.tgz#52cf2f9279a21eb6c59dd385b410f0c0adda8f1a"
+  integrity sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==
+
 giturl@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/giturl/-/giturl-1.0.3.tgz#27f9d1f251d138eb2a5a56cc9dd8512b0fc0bbc6"
@@ -6192,10 +6211,24 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hast-util-heading-rank@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/hast-util-heading-rank/-/hast-util-heading-rank-3.0.0.tgz#2d5c6f2807a7af5c45f74e623498dd6054d2aba8"
+  integrity sha512-EJKb8oMUXVHcWZTDepnr+WNbfnXKFNf9duMesmr4S8SXTJBJ9M4Yok08pu9vxdJwdlGRhVumk9mEhkEvKGifwA==
+  dependencies:
+    "@types/hast" "^3.0.0"
+
 hast-util-parse-selector@^2.0.0:
   version "2.2.5"
   resolved "https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-2.2.5.tgz#d57c23f4da16ae3c63b3b6ca4616683313499c3a"
   integrity sha512-7j6mrk/qqkSehsM92wQjdIgWM2/BW61u/53G6xmC8i1OmEdKLHbk419QKQUjz6LglWsfqoiHmyMRkP1BGjecNQ==
+
+hast-util-to-string@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/hast-util-to-string/-/hast-util-to-string-3.0.1.tgz#a4f15e682849326dd211c97129c94b0c3e76527c"
+  integrity sha512-XelQVTDWvqcl3axRfI0xSeoVKzyIFPwsAGSLIsKdJKQMXDYJS4WYrBNF/8J7RdhIcFI2BOHgAifggsvsxp/3+A==
+  dependencies:
+    "@types/hast" "^3.0.0"
 
 hast-util-whitespace@^2.0.0:
   version "2.0.1"
@@ -10385,6 +10418,17 @@ regjsparser@^0.9.1:
   dependencies:
     jsesc "~0.5.0"
 
+rehype-slug@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/rehype-slug/-/rehype-slug-6.0.0.tgz#1d21cf7fc8a83ef874d873c15e6adaee6344eaf1"
+  integrity sha512-lWyvf/jwu+oS5+hL5eClVd3hNdmwM1kAC0BUvEGD19pajQMIzcNUd/k9GsfQ+FfECvX+JE+e9/btsKH0EjJT6A==
+  dependencies:
+    "@types/hast" "^3.0.0"
+    github-slugger "^2.0.0"
+    hast-util-heading-rank "^3.0.0"
+    hast-util-to-string "^3.0.0"
+    unist-util-visit "^5.0.0"
+
 remark-gfm@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/remark-gfm/-/remark-gfm-3.0.1.tgz#0b180f095e3036545e9dddac0e8df3fa5cfee54f"
@@ -11922,6 +11966,13 @@ unist-util-is@^5.0.0:
   dependencies:
     "@types/unist" "^2.0.0"
 
+unist-util-is@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/unist-util-is/-/unist-util-is-6.0.0.tgz#b775956486aff107a9ded971d996c173374be424"
+  integrity sha512-2qCTHimwdxLfz+YzdGfkqNlH0tLi9xjTnHddPmJwtIG9MGsdbutfTc4P+haPD7l7Cjxf/WZj+we5qfVPvvxfYw==
+  dependencies:
+    "@types/unist" "^3.0.0"
+
 unist-util-position@^4.0.0:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-4.0.4.tgz#93f6d8c7d6b373d9b825844645877c127455f037"
@@ -11944,6 +11995,14 @@ unist-util-visit-parents@^5.0.0, unist-util-visit-parents@^5.1.1:
     "@types/unist" "^2.0.0"
     unist-util-is "^5.0.0"
 
+unist-util-visit-parents@^6.0.0:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-6.0.1.tgz#4d5f85755c3b8f0dc69e21eca5d6d82d22162815"
+  integrity sha512-L/PqWzfTP9lzzEa6CKs0k2nARxTdZduw3zyh8d2NVBnsyvHjSX4TWse388YrrQKbvI8w20fGjGlhgT96WwKykw==
+  dependencies:
+    "@types/unist" "^3.0.0"
+    unist-util-is "^6.0.0"
+
 unist-util-visit@^4.0.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-4.1.2.tgz#125a42d1eb876283715a3cb5cceaa531828c72e2"
@@ -11952,6 +12011,15 @@ unist-util-visit@^4.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^5.0.0"
     unist-util-visit-parents "^5.1.1"
+
+unist-util-visit@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-5.0.0.tgz#a7de1f31f72ffd3519ea71814cccf5fd6a9217d6"
+  integrity sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==
+  dependencies:
+    "@types/unist" "^3.0.0"
+    unist-util-is "^6.0.0"
+    unist-util-visit-parents "^6.0.0"
 
 universalify@^2.0.0:
   version "2.0.0"

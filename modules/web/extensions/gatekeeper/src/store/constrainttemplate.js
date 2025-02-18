@@ -23,15 +23,15 @@ spec:
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: ''
-`
+`;
 
-const getResourceUrl = (params,ksVersion) => {
+const getResourceUrl = (params, ksVersion) => {
   if (ksVersion) {
     return `kapis/templates.gatekeeper.sh/v1${getPath(params)}/${module}`;
   } else {
     return `${API_VERSIONS[module]}${getPath(params)}/${module}`;
   }
-}
+};
 
 const { ...baseStore } = BaseStore({
   module,
@@ -44,7 +44,7 @@ const store = {
   ...baseStore,
   module,
   mapper,
-  yamlRawData
+  yamlRawData,
 };
 
 export default store;

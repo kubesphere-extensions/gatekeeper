@@ -2,15 +2,10 @@ import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { Field, useForm } from '@kubed/components';
+import { PageLayout } from '../../components/Layouts/PageLayout';
 
 import { Pen, Trash } from '@kubed/icons';
-import {
-  DataTable,
-  useCommonActions,
-  useActionMenu,
-  getOriginData,
-  PageLayout,
-} from '@ks-console/shared';
+import { DataTable, useCommonActions, useActionMenu, getOriginData } from '@ks-console/shared';
 import { constraintTemplateStore } from '../../store';
 import FORM_TEMPLATES from '../../utils/form.templates';
 import CreateConstraintTemplateModal from '../../components/Modal/CreateConstraintTemplateModal';
@@ -31,8 +26,7 @@ const ConstraintTemplateList = () => {
     };
   };
   function formatServerData(serverData) {
-    const totalItems = Number(serverData.metadata.continue) || 
-          serverData.items.length || 0;
+    const totalItems = Number(serverData.metadata.continue) || serverData.items.length || 0;
     return {
       ...serverData,
       items: serverData.items,
@@ -130,7 +124,7 @@ const ConstraintTemplateList = () => {
 
   const handleCreate = data => {
     constraintTemplateStore
-      .post(cluster, data)
+      .post({ cluster }, data)
       .then(res => {
         if (res) {
           callback();

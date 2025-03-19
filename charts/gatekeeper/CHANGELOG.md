@@ -11,7 +11,7 @@ Please do not delete this line of version tag
 
 ### Enhancements
 
-- Adapt for KS v4.1.3
+- Adapt for KubeSphere v4.1.3
 - Fix pagination exception
 
 <!---
@@ -23,7 +23,7 @@ Please do not delete this line of version tag
 
 ### Enhancements
 
-- Adapt for KS v4.1.2
+- Adapt for KubeSphere v4.1.2
 
 <!---
 Please do not delete this line of version tag

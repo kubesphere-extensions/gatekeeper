@@ -11,7 +11,7 @@ Please do not delete this line of version tag
 
 ### 优化
 
-- 适配 KS v4.1.3
+- 适配 KubeSphere v4.1.3
 - 修复列表分页异常
 
 <!---
@@ -23,7 +23,7 @@ Please do not delete this line of version tag
 
 ### 优化
 
-- 适配 KS v4.1.2
+- 适配 KubeSphere v4.1.2
 
 <!---
 Please do not delete this line of version tag

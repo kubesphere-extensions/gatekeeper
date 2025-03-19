@@ -3,7 +3,7 @@ Please do not delete this line of version tag
 RELEASE_MARK v4.1.3 RELEASE_MARK
 Please do not delete this line of version tag
 -->
-## v1.0.3
+## v1.0.2
 
 ### Features
 
@@ -11,7 +11,7 @@ Please do not delete this line of version tag
 
 ### Enhancements
 
-- Adapt for KSE v4.1.3、v4.2.0
+- Adapt for KS v4.1.3
 - Fix pagination exception
 
 <!---
@@ -23,7 +23,7 @@ Please do not delete this line of version tag
 
 ### Enhancements
 
-- Adapt for KSE v4.1.2
+- Adapt for KS v4.1.2
 
 <!---
 Please do not delete this line of version tag

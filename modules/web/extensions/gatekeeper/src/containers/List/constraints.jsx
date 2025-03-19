@@ -3,10 +3,11 @@ import { Link, useParams } from 'react-router-dom';
 
 import { Banner, Field, useForm, notify } from '@kubed/components';
 import { Group, Pen, Trash } from '@kubed/icons';
+import { PageLayout } from '../../components/Layouts/PageLayout';
 import { DataTable, useCommonActions, getOriginData, useActionMenu } from '@ks-console/shared';
 import { constraintStore } from '../../store';
 import FORM_TEMPLATES from '../../utils/form.templates';
-import CreateConstraintModal from '../../components/Modal/CreateConstraintModal'; // TODO:
+import CreateConstraintModal from '../../components/Modal/CreateConstraintModal';
 
 const ConstraintList = () => {
   const { cluster } = useParams();
@@ -14,10 +15,10 @@ const ConstraintList = () => {
   const constraintRef = useRef();
   const [form] = useForm();
   const [createVisible, setCreateVisible] = useState(false);
-  const {module, getResourceUrl} = constraintStore;
+  const { module, getResourceUrl } = constraintStore;
   const formTemplate = FORM_TEMPLATES[module]();
 
-  const url = getResourceUrl(params,true);
+  const url = getResourceUrl(params, true);
 
   const callback = () => {
     constraintRef?.current?.refetch();
@@ -48,13 +49,15 @@ const ConstraintList = () => {
         onClick: item => {
           del({
             onOk: () => {
-              constraintStore.delete(item).then(res => {
-                notify.success(t('DELETED_SUCCESSFULLY'));
-                callback('delete');
-              })
-              .catch(() => {});
+              constraintStore
+                .delete({ ...item, cluster })
+                .then(res => {
+                  notify.success(t('DELETED_SUCCESSFULLY'));
+                  callback('delete');
+                })
+                .catch(() => {});
             },
-            resource:[item],
+            resource: [item],
           });
         },
       },
@@ -89,22 +92,23 @@ const ConstraintList = () => {
       width: 20,
       render: (value, record) => renderItemActions({ ...record }),
     },
-  ]
+  ];
 
   const formatFn = data => {
     return {
       name: data.metadata.name,
       _originData: getOriginData(data),
       ...data,
-    }
-  }
+    };
+  };
 
   function formatServerData(serverData) {
+    const totalItems = Number(serverData.metadata.continue) || serverData.items.length || 0;
     return {
       ...serverData,
       items: serverData.items,
-      totalItems: 10,
-    }
+      totalItems: totalItems,
+    };
   }
 
   const renderTableActions = useActionMenu({
@@ -121,7 +125,7 @@ const ConstraintList = () => {
           shadow: true,
         },
         onClick: () => {
-          setCreateVisible(true)
+          setCreateVisible(true);
         },
       },
     ],
@@ -140,13 +144,7 @@ const ConstraintList = () => {
   };
 
   return (
-    <>
-      <Banner
-        icon={<Group />}
-        title={t('Constraints')}
-        description={t('CONSTRAINT_DESC')}
-        className="mb12"
-      />
+    <PageLayout title={t('Constraints')}>
       <DataTable
         ref={constraintRef}
         columns={columns}
@@ -176,7 +174,7 @@ const ConstraintList = () => {
           cluster={cluster}
         />
       )}
-    </>
+    </PageLayout>
   );
 };
 

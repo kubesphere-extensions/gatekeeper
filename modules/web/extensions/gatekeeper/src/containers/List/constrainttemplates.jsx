@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { Banner, Field, useModal, useForm, Switch } from '@kubed/components';
+import { Field, useForm } from '@kubed/components';
+import { PageLayout } from '../../components/Layouts/PageLayout';
 
-import { Group, Pen, Trash } from '@kubed/icons';
+import { Pen, Trash } from '@kubed/icons';
 import { DataTable, useCommonActions, useActionMenu, getOriginData } from '@ks-console/shared';
 import { constraintTemplateStore } from '../../store';
 import FORM_TEMPLATES from '../../utils/form.templates';
@@ -15,7 +16,7 @@ const ConstraintTemplateList = () => {
   const templateRef = useRef();
   const [form] = useForm();
   const [createVisible, setCreateVisible] = useState(false);
-  const {module, getResourceUrl} = constraintTemplateStore;
+  const { module, getResourceUrl } = constraintTemplateStore;
   const formTemplate = FORM_TEMPLATES[module]();
   const formatFn = data => {
     return {
@@ -25,10 +26,11 @@ const ConstraintTemplateList = () => {
     };
   };
   function formatServerData(serverData) {
+    const totalItems = Number(serverData.metadata.continue) || serverData.items.length || 0;
     return {
       ...serverData,
       items: serverData.items,
-      totalItems: serverData.items.length,
+      totalItems: totalItems,
     };
   }
 
@@ -77,16 +79,12 @@ const ConstraintTemplateList = () => {
           to={`/clusters/${cluster}/gatekeeper.constrainttemplates/${row.metadata.name}`}
         />
       ),
-    }, 
+    },
     {
       title: t('Title'),
       canHide: true,
       render: (value, row) => (
-        <Field
-          value={
-            row.metadata.annotations['metadata.gatekeeper.sh/title']||'-'
-          }
-        />
+        <Field value={row.metadata.annotations['metadata.gatekeeper.sh/title'] || '-'} />
       ),
     },
     {
@@ -94,13 +92,7 @@ const ConstraintTemplateList = () => {
       width: '50%',
       field: 'metadata.annotations.description',
       canHide: true,
-      render: (value, row) => (
-        <Field
-          value={
-            value||'-'
-          }
-        />
-      ),
+      render: (value, row) => <Field value={value || '-'} />,
     },
     {
       id: 'more',
@@ -130,23 +122,20 @@ const ConstraintTemplateList = () => {
     ],
   });
 
-  const handleCreate = (data) => {
-    constraintTemplateStore.post(cluster, data).then((res) => {
-      if(res){
-        callback()
-        setCreateVisible(false)
-      }
-    }).catch(()=>{})
+  const handleCreate = data => {
+    constraintTemplateStore
+      .post({ cluster }, data)
+      .then(res => {
+        if (res) {
+          callback();
+          setCreateVisible(false);
+        }
+      })
+      .catch(() => {});
   };
 
   return (
-    <>
-      <Banner
-        icon={<Group />}
-        title={t('Constraint Templates')}
-        description={t('CONSTRAINT_TEMPLATES_DESC')}
-        className="mb12"
-      />
+    <PageLayout title={t('Constraint Templates')}>
       <DataTable
         ref={templateRef}
         columns={columns}
@@ -155,7 +144,7 @@ const ConstraintTemplateList = () => {
         format={formatFn}
         serverDataFormat={formatServerData}
         placeholder={t('SEARCH_BY_NAME')}
-        url={getResourceUrl(params,true)}
+        url={getResourceUrl(params, true)}
         useStorageState={false}
         disableRowSelect={false}
         selectType={false}
@@ -173,7 +162,7 @@ const ConstraintTemplateList = () => {
           store={constraintTemplateStore}
         />
       )}
-    </>
+    </PageLayout>
   );
 };
 

@@ -9,20 +9,7 @@ import ConstraintTemplateConstraints from '../containers/Detail/Data/constraintt
 import ConstraintViolation from '../containers/Detail/Data/constraint.violation';
 import ConstraintsDetails from '../containers/Detail/constraints';
 
-export default [
-  {
-    parentRoute: '/clusters/:cluster',
-    children: [
-      {
-        path: '/clusters/:cluster/gatekeeper.constrainttemplates',
-        element: <ConstraintTemplateList />,
-      },
-      {
-        path: '/clusters/:cluster/gatekeeper.constraints',
-        element: <ConstraintList />,
-      },
-    ],
-  },
+const detailRouter = [
   {
     path: '/clusters/:cluster/gatekeeper.constrainttemplates/:name',
     element: <ConstraintTemplateDetails />,
@@ -53,4 +40,24 @@ export default [
       },
     ],
   },
+];
+
+const ksVersion = Number(globals?.ksConfig?.ksVersion?.slice(1).split('.').slice(0, 2).join('.'));
+
+export default [
+  {
+    parentRoute: '/clusters/:cluster',
+    children: [
+      {
+        path: '/clusters/:cluster/gatekeeper.constrainttemplates',
+        element: <ConstraintTemplateList />,
+      },
+      {
+        path: '/clusters/:cluster/gatekeeper.constraints',
+        element: <ConstraintList />,
+      },
+      ...(ksVersion > 4.1 ? detailRouter : []),
+    ],
+  },
+  ...(ksVersion <= 4.1 ? detailRouter : []),
 ];

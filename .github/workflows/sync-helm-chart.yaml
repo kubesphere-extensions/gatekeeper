@@ -1,10 +1,9 @@
+name: SyncHelmChart
 on:
   workflow_dispatch:
   push:
     paths:
       - 'charts/gatekeeper/**'
-    branches:
-      - 'master'
     tags:
       - 'v*'
 
